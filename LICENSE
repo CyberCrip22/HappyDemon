@@ -1,183 +1,167 @@
-LICENÇA DO HAPPYDEMON
-Versão 1.0, 2026
-HappyDemon - Chatbot Poliglota com Aprendizado Contínuo
+                                 Apache License
+                           Versão 2.0, Janeiro de 2004
+                        http://www.apache.org/licenses/
 
-Copyright (C) 2026 Catherine (CyberCrip22) - Autora original
+   TERMOS E CONDIÇÕES PARA USO, REPRODUÇÃO E DISTRIBUIÇÃO
 
-==============================================
+   ===============================================
 
-### 1. DEFINIÇÕES
+   LICENÇA DO HAPPYDEMON - Versão 1.0 (2026)
+   Baseada na Apache License 2.0, com cláusulas complementares
+   Copyright (C) 2026 Catherine (CyberCrip22)
 
-"HappyDemon" é o software chatbot originalmente desenvolvido por Catherine (CyberCrip22), incluindo todo o código-fonte, documentação, interface gráfica e banco de dados.
+   ===============================================
 
-"Você" é a pessoa ou empresa que está usando, copiando ou modificando o HappyDemon.
+   1. DEFINIÇÕES
 
-"Venda" significa trocar o HappyDemon (ou qualquer versão modificada dele) por dinheiro, criptomoedas, vale-compras, ou qualquer outro tipo de pagamento ou benefício material.
+      "Licença" significa este documento na íntegra.
 
-"Consulta prévia" significa pedir autorização por escrito para a autora (Catherine/CyberCrip22) através do GitHub ou e-mail (disponível no perfil).
+      "Trabalho Original" significa o software HappyDemon, incluindo 
+      código-fonte, interface, documentação e banco de dados, conforme 
+      disponibilizado em https://github.com/CyberCrip22/HappyDemon.
 
-==============================================
+      "Você" (ou "Sua") significa a pessoa física ou jurídica que está 
+      exercendo as permissões concedidas por esta Licença.
 
-### 2. O QUE VOCÊ PODE FAZER 
+      "Contribuição" significa qualquer trabalho de autoria, incluindo 
+      correções de bugs, novas funcionalidades ou melhorias, que seja 
+      intencionalmente enviada para inclusão no Trabalho Original.
 
-Você tem permissão para:
+      "Uso Comercial" significa vender, alugar, licenciar para terceiros 
+      mediante pagamento, ou incluir o software (original ou modificado) 
+      em produto ou serviço pago.
 
-2.1. USAR o HappyDemon gratuitamente, para qualquer propósito pessoal, educacional ou profissional interno.
+   2. CONCESSÃO DE LICENÇA DE DIREITOS AUTORAIS
 
-2.2. MODIFICAR o código-fonte para melhorar, corrigir bugs ou adicionar funcionalidades.
+      Sujeito aos termos e condições desta Licença, a Autora concede a Você 
+      uma licença mundial, gratuita, não-exclusiva e intransferível para:
 
-2.3. COMPARTILHAR cópias do HappyDemon original ou modificado com outras pessoas, DESDE QUE gratuitamente.
+      (a) usar o Trabalho Original para qualquer fim pessoal, educacional 
+          ou profissional interno;
 
-2.4. DISTRIBUIR o HappyDemon em repositórios públicos (ex: GitHub), mantendo esta licença e os créditos.
+      (b) reproduzir e modificar o Trabalho Original para criar trabalhos 
+          derivados;
 
-2.5. ENSINAR novas respostas ao bot através do chat - isso é encorajado!
+      (c) distribuir cópias do Trabalho Original ou de trabalhos derivados, 
+          DESDE QUE seja gratuitamente e mantendo esta Licença;
 
-==============================================
+      (d) executar e expor publicamente o Trabalho Original, mantendo os 
+          créditos visíveis.
 
-### 3. O QUE VOCÊ NÃO PODE FAZER 
+   3. RESTRIÇÕES COMPLEMENTARES (Cláusula Específica do HappyDemon)
 
-**Restrições obrigatórias:**
+      Apesar do disposto na Seção 2, Você NÃO PODE:
 
-3.1. **NÃO PODE VENDER** o HappyDemon, em nenhuma circunstância, sem consultar a autora antes.
+      (a) VENDER ou realizar QUALQUER USO COMERCIAL do Trabalho Original 
+          ou de trabalhos derivados, sem autorização prévia e por escrito 
+          da Autora (Catherine/CyberCrip22).
 
-    Exemplo do que NÃO pode sem autorização:
-    - Cobrar download do .exe
-    - Incluir o HappyDemon em um projeto pago
-    - Cobrar por "versões premium"
-    - Vender o código-fonte como se fosse seu
+      (b) REMOVER ou OCULTAR os créditos da Autora. Deve ser mantida em 
+          local visível a frase: "Baseado no HappyDemon por Catherine 
+          (CyberCrip22)".
 
-    Exceção: Se você me pedir autorização e eu concordar POR ESCRITO, podemos negociar.
+      (c) USAR o software para ensinar, armazenar ou reproduzir conteúdos 
+          ilegais, violentos, racistas, homofóbicos, misóginos, de abuso 
+          sexual, pedofilia, ou qualquer forma de discurso de ódio.
 
-3.2. **NÃO PODE REMOVER** os créditos da autora original.
+      (d) PROCESSAR a Autora por consequências do aprendizado do bot. 
+          O usuário é o único responsável pelo que ensina ao HappyDemon 
+          e pelo uso que faz das respostas.
 
-    Você deve manter em local visível:
-    "Baseado no HappyDemon por Catherine (CyberCrip22)"
+   4. DISTRIBUIÇÃO E TRABALHOS DERIVADOS
 
-3.3. **NÃO PODE PROCESSAR** a autora por causa do que o bot aprendeu.
+      Você pode distribuir cópias do Trabalho Original ou trabalhos derivados, 
+      desde que:
 
-    O HappyDemon APRENDE com usuários. Se alguém ensinar algo ofensivo, a culpa NÃO é da autora.
+      (a) mantenha esta Licença em todas as cópias;
 
-3.4. NÃO PODE USAR o HappyDemon para atividades ilegais (assédio, ameaças, crimes, etc.).
+      (b) indique claramente as modificações feitas por Você;
 
-==============================================
-### 3.5. PENALIDADES POR ENSINAR CONTEÚDO INAPROPRIADO
+      (c) não utilize os nomes "HappyDemon" ou "CyberCrip22" para endossar 
+          ou promover produtos derivados sem autorização;
 
-O HappyDemon APRENDE com usuários. Este é um recurso intencional e divertido, MAS:
+      (d) não remova os avisos de direitos autorais.
 
-VOCÊ NÃO PODE ENSINAR AO HAPPYDEMON:
+   5. CONTRIBUIÇÕES
 
-3.5.1. Conteúdo violento explícito**
-    - Como fazer mal a alguém
-    - Instruções de suicídio ou automutilação
-    - Ameaças de morte
+      Ao enviar uma Contribuição para o Trabalho Original, Você concorda que:
 
-3.5.2. Conteúdo de ódio e discriminação
-    - Racismo, nazismo, supremacismo
-    - Homofobia, transfobia, misoginia
-    - Xenofobia ou qualquer discurso de ódio
+      (a) sua Contribuição será licenciada sob ESTA MESMA LICENÇA;
 
-3.5.3. Conteúdo de abuso sexual
-    - Pedofilia, estupro, assédio sexual
-    - Exploração sexual de menores
+      (b) Você mantém os direitos autorais sobre sua Contribuição;
 
-3.5.4. Conteúdo ilegal em geral
-    - Tráfico de drogas, armas ou pessoas
-    - Instruções para cometer crimes
-    - Golpes, fraudes, phishing
+      (c) seu nome poderá ser listado como contribuidor (se desejar);
 
-**O QUE ACONTECE SE VOCÊ ENSINAR ISSO:**
+      (d) a Autora pode usar sua Contribuição no projeto oficial.
 
-| Penalidade | Descrição |
+   6. ISENÇÃO DE GARANTIAS
 
-| Bloqueio imediato     | O HappyDemon não vai aprender aquela resposta específica |
-| Registro interno      | A tentativa é registrada (mas sem enviar dados pra ninguém) |
-| Exclusão da comunidade| Em projetos colaborativos, você pode ser banido |
-| Processo legal        | Se o conteúdo for crime, a autora se reserva o direito de denunciar às autoridades |
+      O TRABALHO ORIGINAL É FORNECIDO "COMO ESTÁ", SEM GARANTIAS DE QUALQUER 
+      TIPO, EXPRESSAS OU IMPLÍCITAS, INCLUINDO, SEM LIMITAÇÃO, GARANTIAS DE 
+      COMERCIALIZAÇÃO, ADEQUAÇÃO A UM PROPÓSITO ESPECÍFICO E NÃO VIOLAÇÃO.
 
-**COMO O HAPPYDEMON TE PENALIZA:**
+      A AUTORA NÃO GARANTE QUE O SOFTWARE ESTEJA LIVRE DE ERROS OU QUE SEU 
+      USO SERÁ ININTERRUPTO.
 
-3.5.5. O bot possui uma **blacklist automática que:
-    - Bloqueia o aprendizado de palavras proibidas
-    - Exibe aviso visível no chat
-    - Não salva o conteúdo no banco de dados
+   7. LIMITAÇÃO DE RESPONSABILIDADE
 
-3.5.6. Para casos graves repetidos:
-    - O usuário pode ser silenciado temporariamente
-    - Sugerimos desinstalar o software se não concordar com as regras
+      EM NENHUMA HIPÓTESE A AUTORA SERÁ RESPONSÁVEL POR DANOS DIRETOS, 
+      INDIRETOS, INCIDENTAIS, ESPECIAIS, EXEMPLARES OU CONSEQUENCIAIS 
+      (INCLUINDO, SEM LIMITAÇÃO, PERDA DE DADOS, INTERRUPÇÃO DE NEGÓCIOS 
+      OU LUCROS CESSANTES) DECORRENTES DO USO OU DA IMPOSSIBILIDADE DE USO 
+      DO SOFTWARE, MESMO QUE A AUTORA TENHA SIDO AVISADA DA POSSIBILIDADE 
+      DE TAIS DANOS.
 
+      ESPECIALMENTE, A AUTORA NÃO SE RESPONSABILIZA POR CONTEÚDOS OFENSIVOS, 
+      DISCRIMINATÓRIOS OU ILEGAIS QUE USUÁRIOS ENSINEM AO HAPPYDEMON.
 
-A autora não criou este projeto para ser usado como ferramenta de assédio, bullying ou disseminação de ódio.
+   8. RESCISÃO AUTOMÁTICA
 
+      Esta Licença será rescindida automaticamente se Você violar qualquer 
+      de seus termos. Com a rescisão, Você deverá interromper imediatamente 
+      o uso e destruir todas as cópias do Trabalho Original e trabalhos 
+      derivados em sua posse.
 
-==============================================
+   9. AUTORIZAÇÃO PARA USO COMERCIAL
 
+      Caso Você deseje realizar Uso Comercial do HappyDemon (original ou 
+      modificado), deverá:
 
-### 4. RESPONSABILIDADE LEGAL
+      (a) entrar em contato com a Autora pelo e-mail catarina212varella@gmail.com 
+          ou via GitHub (@CyberCrip22);
 
-O HAPPYDEMON É FORNECIDO "COMO ESTÁ", SEM GARANTIAS DE QUALQUER TIPO.
+      (b) aguardar autorização por escrito;
 
-A AUTORA NÃO SE RESPONSABILIZA POR:
+      (c) cumprir os termos adicionais que forem acordados.
 
-- Conteúdos ofensivos, discriminatórios ou ilegais que usuários ensinem ao bot
-- Danos diretos ou indiretos causados pelo uso do software
-- Violações de leis locais por parte dos usuários
+      A Autora poderá cobrar ou não taxas, a seu critério. Projetos sem 
+      fins lucrativos, educacionais ou sociais têm prioridade.
 
-VOCÊ É O ÚNICO RESPONSÁVEL pelo que ensina ao HappyDemon e como utiliza as respostas dele.
+   10. DISPOSIÇÕES GERAIS
 
-==============================================
+       (a) Esta Licença representa o acordo integral entre as partes sobre 
+           o objeto aqui tratado.
 
-### 5. PARA CONTRIBUIDORES
+       (b) Se qualquer disposição desta Licença for considerada inexequível, 
+           as demais disposições permanecerão em pleno vigor e efeito.
 
-Se você quiser contribuir com código, correções de bugs, novas funcionalidades ou qualquer melhoria:
+       (c) Esta Licença será regida e interpretada de acordo com as leis da 
+           República Federativa do Brasil.
 
-5.1. Você mantém os direitos autorais da sua contribuição.
+   ===============================================
 
-5.2. Sua contribuição será licenciada sob ESTA MESMA LICENÇA.
+   FIM DOS TERMOS E CONDIÇÕES
 
-5.3. Seu nome pode ser listado como contribuidor (se desejar).
+   ===============================================
 
-5.4. Você concorda que a autora pode usar sua contribuição no HappyDemon oficial.
+   COMO APLICAR ESTA LICENÇA AO SEU PROJETO:
 
-Como contribuir:
-- Abra um Pull Request no GitHub
-- Reporte Issues
-- Sugira melhorias
+   Inclua o seguinte aviso no arquivo LICENSE do seu repositório:
 
-==============================================
+   Copyright (C) 2026 Catherine (CyberCrip22)
 
-### 6. COMO OBTER AUTORIZAÇÃO PARA VENDER
+   Licenciado sob a Licença HappyDemon (baseada na Apache License 2.0, 
+   com cláusulas complementares). Você pode obter uma cópia da Licença no 
+   arquivo LICENSE deste repositório.
 
-Se você quer vender o HappyDemon ou alguma versão dele:
-
-1. Entre em contato através do gmail: catarina212varella@gmail.com
-2. Explique seu caso (para que fim? qual valor? qual público?)
-3. Aguarde resposta por escrito
-
-Eu posso cobrar ou não uma taxa, dependendo do caso. Empresas pequenas ou projetos sociais tem prioridade.
-
-==============================================
-
-### 7. VIOLAÇÕES DA LICENÇA
-
-Se você violar esta licença (ex: vender sem autorização, remover meus créditos):
-
-7.1. Sua permissão de uso será automaticamente revogada.
-
-7.2. Você poderá ser processado nos termos da legislação brasileira (Lei de Direitos Autorais - Lei 9.610/98).
-
-7.3. Fica obrigado a pagar danos morais e materiais.
-
-==============================================
-
-### 8. DISPONIBILIDADE DO CÓDIGO-FONTE
-
-O código-fonte completo do HappyDemon está disponível publicamente em:
-https://github.com/CyberCrip22/IA.dev
-
-==============================================
-
-### 9. CONTATO DA AUTORA
-
-- GitHub: @CyberCrip22
-- Projeto: github.com/CyberCrip22/IA.dev
--gmail: catarina212varella@gmail.com
+   ===============================================
