@@ -1,0 +1,13 @@
+HappyDemon-Web/
+│
+├── backend/
+│   ├── app.py                 # Servidor Flask
+│   ├── happydemon_core.py    # Classe principal
+│   └── happy_demon.db         # (vai ser criado automaticamente)
+│
+├── frontend/
+│   ├── index.html
+│   ├── style.css
+│   └── script.js
+│
+└── requirements.txt
