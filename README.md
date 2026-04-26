@@ -19,7 +19,7 @@
 |Memória Infinita    | Banco de dados local com índices otimizados. Nunca esquece o que você ensinou. 
 |Múltiplas Respostas | Para uma mesma pergunta, ele pode ter várias respostas. A escolha é aleatória. 
 |Fuzzy Matching      | Entende variações de frase. "Como você está?" e "como cê tá?" são a mesma coisa pra ele.
-|Blacklist Ativa|    | Não aprende nem repete violência, racismo, pedofilia ou outras merdas. 
+|Blacklist Ativa     | Não aprende nem repete violência, racismo, pedofilia ou outras merdas. 
 |Interface Dark Mode | Tema escuro com código de cores para cada tipo de mensagem. 
 |Ícone Personalizado | Pixel art exclusiva (você pode colocar a sua). 
 |Backup JSON| Exporta todo o conhecimento do bot para um arquivo JSON organizado por idioma. 
