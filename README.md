@@ -1,4 +1,4 @@
-# 😈 HappyDemon - O Chatbot que aprende com Você
+# 😈 HappyDemon - O Chatbot que aprende com você
 
 ![Python Version](https://img.shields.io/badge/Python-3.8+-blue?logo=python&logoColor=white)
 ![Platform](https://img.shields.io/badge/Platform-Windows%20|%20Linux%20|%20macOS-lightgrey)
