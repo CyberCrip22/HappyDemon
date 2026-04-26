@@ -24,6 +24,8 @@
 |Ícone Personalizado | Pixel art exclusiva (você pode colocar a sua). 
 |Backup JSON| Exporta todo o conhecimento do bot para um arquivo JSON organizado por idioma. 
 
+
+
 ⚠️ Eu não me responsabilizo pelo que você irá ensinar ai HappyDemon, aviso que isso é um projeto de fins educacionais e estou trabalhando para ele ter limites rigidos e peço para que o usuario denuncie o mal ofenças ou ameaças do bot
 
 ---
@@ -42,6 +44,10 @@
 # Clone o repositório
 git clone https://github.com/CyberCrip22/IA.dev.git
 
+
+---
+
+
 ## ⚖️ Licença e Aviso Rápido
 
 Este projeto é licenciado sob **Apache License 2.0 com cláusulas adicionais**.
@@ -59,7 +65,7 @@ Este projeto é licenciado sob **Apache License 2.0 com cláusulas adicionais**.
 
 ### ⚠️ ISENÇÃO DE RESPONSABILIDADE
 
-O HappyDemon **aprende com os usuários**. A autora **não se responsabiliza** por conteúdos ofensivos, ilegais ou prejudiciais que usuários possam ensinar ao bot. Você é o único responsável pelo que ensina e como usa o software.
+O HappyDemon **aprende com os usuários. A autora não se responsabiliza por conteúdos ofensivos, ilegais ou prejudiciais que usuários possam ensinar ao bot. Você é o único responsável pelo que ensina e como usa o software.
 
 ### Leia a licença completa
 
