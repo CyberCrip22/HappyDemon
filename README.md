@@ -48,11 +48,11 @@ git clone https://github.com/CyberCrip22/IA.dev.git
 ---
 
 
-## ⚖️ Licença e Aviso Rápido
+### ⚖️ Licença e Aviso Rápido
 
 Este projeto é licenciado sob **Apache License 2.0 com cláusulas adicionais**.
 
-### Resumo do que você pode e NÃO pode fazer:
+## Resumo do que você pode e NÃO pode fazer:
 
 | Ação | Permissão |
 
@@ -65,9 +65,9 @@ Este projeto é licenciado sob **Apache License 2.0 com cláusulas adicionais**.
 
 ### ⚠️ ISENÇÃO DE RESPONSABILIDADE
 
-O HappyDemon **aprende com os usuários. A autora não se responsabiliza por conteúdos ofensivos, ilegais ou prejudiciais que usuários possam ensinar ao bot. Você é o único responsável pelo que ensina e como usa o software.
+O HappyDemon aprende com os usuários. A autora não se responsabiliza por conteúdos ofensivos, ilegais ou prejudiciais que usuários possam ensinar ao bot. Você é o único responsável pelo que ensina e como usa o software.
 
-### Leia a licença completa
+## Leia a licença completa
 
 Arquivo [`LICENSE`](LICENSE) na raiz do projeto para os termos legais completos.
 
