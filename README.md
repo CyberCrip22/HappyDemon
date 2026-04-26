@@ -45,8 +45,6 @@
 git clone https://github.com/CyberCrip22/IA.dev.git
 
 
----
-
 
 ### ⚖️ Licença e Aviso Rápido
 
