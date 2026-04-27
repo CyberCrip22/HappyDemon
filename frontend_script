@@ -1,0 +1,287 @@
+// frontend/script.js
+let sessionId = 'session_' + Math.random().toString(36).substr(2, 9);
+let idiomaForcado = null;
+let modoAprendizado = false;
+let ultimaPergunta = null;
+let ultimoIdioma = null;
+let personalidadeAtual = 'amigavel';
+
+// DOM elements
+const messagesArea = document.getElementById('messages-area');
+const messageInput = document.getElementById('message-input');
+const sendButton = document.getElementById('send-button');
+const btnBackup = document.getElementById('btn-backup');
+const btnLimparChat = document.getElementById('btn-limpar-chat');
+const btnAtualizarStats = document.getElementById('btn-atualizar-stats');
+const modal = document.getElementById('backup-modal');
+const modalOk = document.getElementById('modal-ok');
+const closeModal = document.querySelector('.close');
+const statusText = document.getElementById('status-text');
+
+// Inicialização
+document.addEventListener('DOMContentLoaded', () => {
+    carregarEstatisticas();
+    carregarPersonalidades();
+    setupLanguageButtons();
+    setupEventListeners();
+    adicionarMensagemBoasVindas();
+});
+
+function carregarPersonalidades() {
+    fetch('/api/personalidades')
+        .then(res => res.json())
+        .then(data => {
+            const container = document.querySelector('.language-controls');
+            if (!container) return;
+            
+            // Adiciona seletor de personalidade
+            const persoDiv = document.createElement('div');
+            persoDiv.className = 'personalidade-selector';
+            persoDiv.style.marginLeft = 'auto';
+            persoDiv.style.marginRight = '16px';
+            persoDiv.innerHTML = `
+                <select id="personalidade-select" style="background:#2b2b2b; color:white; border:1px solid #ff6b6b; border-radius:20px; padding:6px 12px; font-size:12px;">
+                    ${data.map(p => `<option value="${p}" ${p === 'amigavel' ? 'selected' : ''}>${p.toUpperCase()}</option>`).join('')}
+                </select>
+            `;
+            
+            // Encontra o container de status e insere antes
+            const statusIndicator = document.querySelector('.status-indicator');
+            if (statusIndicator && statusIndicator.parentNode) {
+                statusIndicator.parentNode.insertBefore(persoDiv, statusIndicator);
+            }
+            
+            document.getElementById('personalidade-select').addEventListener('change', (e) => {
+                personalidadeAtual = e.target.value;
+                adicionarMensagemSistema(`🎭 Personalidade alterada para: ${personalidadeAtual.toUpperCase()}`);
+            });
+        });
+}
+
+function setupLanguageButtons() {
+    const langBtns = document.querySelectorAll('.lang-btn');
+    langBtns.forEach(btn => {
+        btn.addEventListener('click', () => {
+            const lang = btn.dataset.lang;
+            langBtns.forEach(b => b.classList.remove('active'));
+            btn.classList.add('active');
+            
+            if (lang === 'auto') {
+                idiomaForcado = null;
+                adicionarMensagemSistema('🌍 Detecção automática de idioma ativada');
+            } else {
+                idiomaForcado = lang;
+                adicionarMensagemSistema(`🌍 Idioma forçado: ${lang.toUpperCase()}`);
+            }
+        });
+    });
+}
+
+function setupEventListeners() {
+    sendButton.addEventListener('click', enviarMensagem);
+    messageInput.addEventListener('keypress', (e) => {
+        if (e.key === 'Enter') enviarMensagem();
+    });
+    btnBackup.addEventListener('click', fazerBackup);
+    btnLimparChat.addEventListener('click', limparChat);
+    btnAtualizarStats.addEventListener('click', () => carregarEstatisticas());
+    
+    modalOk.addEventListener('click', () => modal.style.display = 'none');
+    closeModal.addEventListener('click', () => modal.style.display = 'none');
+    window.addEventListener('click', (e) => {
+        if (e.target === modal) modal.style.display = 'none';
+    });
+}
+
+function adicionarMensagemBoasVindas() {
+    const div = document.createElement('div');
+    div.className = 'bot-message';
+    div.innerHTML = `
+        <div class="message-avatar">😈</div>
+        <div class="message-bubble">
+            <p>Olá! Sou o <strong>HappyDemon v2</strong> com múltiplas personalidades!</p>
+            <p>🎭 Personalidades: <strong>Amigavel, Tsundere, Yandere, Zoeira, Arrombada, Bully</strong></p>
+            <p>🌍 Falo <strong>Português • English • Español</strong></p>
+            <p>Clique no seletor ao lado para mudar minha personalidade!</p>
+            <p><em>Me pergunte qualquer coisa. Se eu não souber, você me ensina!</em></p>
+        </div>
+    `;
+    messagesArea.appendChild(div);
+    messagesArea.scrollTop = messagesArea.scrollHeight;
+}
+
+function adicionarMensagemUsuario(texto, idioma = '') {
+    const div = document.createElement('div');
+    div.className = 'user-message';
+    div.innerHTML = `
+        <div class="message-avatar">👤</div>
+        <div class="message-bubble">
+            ${idioma ? `<span style="font-size:10px; opacity:0.7;">[${idioma.toUpperCase()}]</span> ` : ''}${escapeHtml(texto)}
+        </div>
+    `;
+    messagesArea.appendChild(div);
+    messagesArea.scrollTop = messagesArea.scrollHeight;
+}
+
+function adicionarMensagemBot(texto, score = null) {
+    const div = document.createElement('div');
+    div.className = 'bot-message';
+    div.innerHTML = `
+        <div class="message-avatar">${getIconePersonalidade()}</div>
+        <div class="message-bubble">
+            ${escapeHtml(texto)}
+            ${score ? `<span class="score-badge">${score}% match</span>` : ''}
+        </div>
+    `;
+    messagesArea.appendChild(div);
+    messagesArea.scrollTop = messagesArea.scrollHeight;
+}
+
+function adicionarMensagemSistema(texto) {
+    const div = document.createElement('div');
+    div.style.textAlign = 'center';
+    div.style.fontSize = '12px';
+    div.style.color = '#888';
+    div.style.margin = '8px 0';
+    div.style.fontStyle = 'italic';
+    div.innerHTML = `🔧 ${escapeHtml(texto)}`;
+    messagesArea.appendChild(div);
+    messagesArea.scrollTop = messagesArea.scrollHeight;
+}
+
+function adicionarMensagemAprendizado(texto) {
+    const div = document.createElement('div');
+    div.style.textAlign = 'center';
+    div.style.fontSize = '12px';
+    div.style.color = '#ffb74d';
+    div.style.margin = '8px 0';
+    div.style.fontStyle = 'italic';
+    div.innerHTML = `📚 ${escapeHtml(texto)}`;
+    messagesArea.appendChild(div);
+    messagesArea.scrollTop = messagesArea.scrollHeight;
+}
+
+function getIconePersonalidade() {
+    const icones = {
+        'amigavel': '🤗',
+        'tsundere': '😤',
+        'yandere': '🔪',
+        'zoeira': '😂',
+        'arrombada': '🤬',
+        'bully': '💀'
+    };
+    return icones[personalidadeAtual] || '😈';
+}
+
+function enviarMensagem() {
+    const mensagem = messageInput.value.trim();
+    if (!mensagem) return;
+    
+    messageInput.value = '';
+    
+    if (modoAprendizado) {
+        enviarAprendizado(mensagem);
+        return;
+    }
+    
+    adicionarMensagemUsuario(mensagem);
+    statusText.textContent = 'Digitando...';
+    
+    fetch('/api/conversar', {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify({
+            mensagem: mensagem,
+            session_id: sessionId,
+            idioma_forcado: idiomaForcado,
+            personalidade: personalidadeAtual
+        })
+    })
+    .then(res => res.json())
+    .then(data => {
+        if (data.aprendendo) {
+            modoAprendizado = true;
+            ultimaPergunta = mensagem;
+            ultimoIdioma = data.idioma;
+            adicionarMensagemBot(data.resposta);
+            adicionarMensagemAprendizado('Modo aprendizado ativado! Digite a resposta que você quer que eu aprenda.');
+            statusText.textContent = 'Aprendendo...';
+        } else {
+            adicionarMensagemBot(data.resposta, data.score);
+            statusText.textContent = 'Conectado';
+        }
+    })
+    .catch(err => {
+        console.error(err);
+        adicionarMensagemBot('🐞 Erro de conexão com o servidor. Certifique-se de que o backend está rodando.');
+        statusText.textContent = 'Erro';
+    });
+}
+
+function enviarAprendizado(resposta) {
+    adicionarMensagemUsuario(resposta, 'ensino');
+    
+    fetch('/api/ensinar', {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify({
+            session_id: sessionId,
+            resposta: resposta
+        })
+    })
+    .then(res => res.json())
+    .then(data => {
+        adicionarMensagemBot(data.resposta);
+        modoAprendizado = false;
+        ultimaPergunta = null;
+        statusText.textContent = 'Conectado';
+    })
+    .catch(err => {
+        console.error(err);
+        adicionarMensagemBot('Erro ao aprender. Tente novamente.');
+        statusText.textContent = 'Erro';
+    });
+}
+
+function carregarEstatisticas() {
+    fetch('/api/estatisticas')
+        .then(res => res.json())
+        .then(data => {
+            document.getElementById('stat-perguntas').textContent = data.total_perguntas || 0;
+            document.getElementById('stat-respostas').textContent = data.total_respostas || 0;
+            document.getElementById('stat-pt').textContent = data.por_idioma?.pt || 0;
+            document.getElementById('stat-en').textContent = data.por_idioma?.en || 0;
+            document.getElementById('stat-es').textContent = data.por_idioma?.es || 0;
+            
+            // Se quiser mostrar por personalidade
+            if (data.por_personalidade) {
+                console.log('Personalidades:', data.por_personalidade);
+            }
+        })
+        .catch(err => console.error('Erro ao carregar estatísticas:', err));
+}
+
+function fazerBackup() {
+    fetch('/api/backup')
+        .then(res => res.json())
+        .then(() => {
+            modal.style.display = 'flex';
+        })
+        .catch(err => {
+            console.error('Erro ao fazer backup:', err);
+            alert('Erro ao fazer backup');
+        });
+}
+
+function limparChat() {
+    while (messagesArea.firstChild) {
+        messagesArea.removeChild(messagesArea.firstChild);
+    }
+    adicionarMensagemBoasVindas();
+}
+
+function escapeHtml(text) {
+    const div = document.createElement('div');
+    div.textContent = text;
+    return div.innerHTML;
+}

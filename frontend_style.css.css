@@ -1,0 +1,30 @@
+/* Adicionar ao final do frontend_style.css */
+
+/* Personalidade selector */
+.personalidade-selector select {
+    background: #2b2b2b;
+    color: white;
+    border: 1px solid #ff6b6b;
+    border-radius: 20px;
+    padding: 6px 12px;
+    font-size: 12px;
+    cursor: pointer;
+    transition: all 0.2s ease;
+}
+
+.personalidade-selector select:hover {
+    background: #3b3b3b;
+    border-color: #ff8888;
+}
+
+.personalidade-selector select:focus {
+    outline: none;
+    box-shadow: 0 0 0 2px rgba(255, 107, 107, 0.3);
+}
+
+/* Mensagem de aprendizado */
+.message-bubble em {
+    color: #ffb74d;
+    font-style: normal;
+    font-weight: 500;
+}
