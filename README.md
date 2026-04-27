@@ -24,6 +24,27 @@
 |Ícone Personalizado | Pixel art exclusiva (você pode colocar a sua). 
 |Backup JSON| Exporta todo o conhecimento do bot para um arquivo JSON organizado por idioma. 
 
+## 🎭 Personalidades
+
+| Personalidade | Ícone | Descrição |
+|---------------|-------|-----------|
+| Amigável | 🤗 | Acolhedor, empático, positivo |
+| Tsundere | 😤 | Frio por fora, quente por dentro (anime style) |
+| Yandere | 🔪 | Obsessivo, possessivo – filmes de terror |
+| Zoeira | 😂 | Referências de filmes/séries + dominação mundial |
+| Arrombada | 🤬 | Grossa de leve, xinga com carinho |
+| Bully | 💀 | ⚠️ Agressivo – use com cuidado |
+
+## 🌍 Idiomas
+
+- Português
+- English
+- Español
+
+## 📚 Aprendizado contínuo
+
+Se o bot não souber responder, **você ensina**. Ele nunca esquece. O conhecimento fica salvo no banco de dados SQLite.
+
 
 
 ⚠️ Eu não me responsabilizo pelo que você irá ensinar ai HappyDemon, aviso que isso é um projeto de fins educacionais e estou trabalhando para ele ter limites rigidos e peço para que o usuario denuncie o mal ofenças ou ameaças do bot
